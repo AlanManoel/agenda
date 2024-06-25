@@ -1,0 +1,26 @@
+<%- include('includes/head'); %>
+
+<header>
+    <div>
+        <img src="/assets/img/Vetor.png">
+        <p>Agenda</p>
+    </div>
+</header>
+<main>
+    <div>
+        <h1>Criar conta</h1>
+        <form action="register/" method="POST" >
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <label>Nome</label>
+            <input type="text" name="nome">
+            <label>E-mail</label>
+            <input type="email" name="email">
+            <label>Senha</label>
+            <input type="password" name="password">
+            <button>Criar minha conta e entrar</button>
+        </form>
+        <%- include('includes/messages'); %>
+    </div>
+    <img src="/assets/img/Vetor.png">
+</main>
+<%- include('includes/footer'); %>

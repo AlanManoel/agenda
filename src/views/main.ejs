@@ -1,0 +1,21 @@
+<%- include('includes/head'); %>
+
+    <header>
+        <div>
+            <img src="/assets/img/Vetor.png">
+            <p>Agenda</p>
+        </div>
+        <a class="btn-sair" href="/sair">Sair</a>
+    </header>
+
+    <main>
+        <div class="conteiner-bemVindo">
+            <img src="/assets/img/Vetor.png">
+            <div>
+                <h1>Seja bem vindo <span> <%= user.nome %> </span>!</h1>
+                <p>Abaixo estão todos os seus contatos</p>
+            </div>
+        </div>
+    </main>
+
+    <%- include('includes/footer'); %>

@@ -1,0 +1,126 @@
+:root {
+  --body-color: #F8F8FF;
+  --yellow-color: #E89F38;
+  --input-color: #EBEBEB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  margin: 0 100px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+main img {
+  height: 474px;
+  margin-left: 218px;
+}
+
+
+header {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header p {
+  color: var(--yellow-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+header img {
+  height: 40px;
+}
+
+header div {
+  display: flex;
+}
+
+form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 1rem;
+}
+
+input {
+  height: 48px;
+  width: 474px;
+  background-color: var(--input-color);
+  font-size: 1rem;
+  padding-left: 8px;
+  border-radius: 8px;
+}
+
+form button {
+  height: 48px;
+  width: 474px;
+  margin: 24px 0;
+  background-color: var(--yellow-color);
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+p a {
+  color: var(--yellow-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mensagemErro {
+  font-size: 1rem;
+  color: red;
+}
+
+.btn-sair {
+  color: #000;
+  font-size: 1rem;
+}
+
+.conteiner-bemVindo {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteiner-bemVindo img {
+  height: 96px;
+}
+
+.conteiner-bemVindo div h1 {
+  max-width: 440px;
+  font-size: 2.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.conteiner-bemVindo div span {
+  color: var(--yellow-color);
+}
+
+.conteiner-bemVindo div p {
+  font-size: 1.5rem;
+}

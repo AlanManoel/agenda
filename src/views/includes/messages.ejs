@@ -1,0 +1,7 @@
+<% if (erros.length> 0) { %>
+    <p class="mensagemErro">
+        <% erros.forEach(function(erro) { %>
+            <%= erro %> <br>
+                <% }); %>
+    </p>
+    <% } %>
