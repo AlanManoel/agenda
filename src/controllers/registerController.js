@@ -1,7 +1,7 @@
 const User = require("../models/UserModel");
 
 exports.index = (req, res) => {
-  res.render("register");
+  res.render("register", {title: "Criar Conta"});
 };
 
 exports.register = async function (req, res) {

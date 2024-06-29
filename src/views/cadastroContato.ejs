@@ -1,0 +1,37 @@
+<%- include('includes/head'); %>
+
+    <header>
+        <div>
+            <img src="/assets/img/Vetor.png">
+            <p>Agenda</p>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Adicionar contato</h1>
+            <% if(contato._id) { %>
+                <form action="/cadastroContato/<%= contato._id %>" method="POST">
+                    <% } else{ %>
+                        <form action="cadastroContato/" method="POST">
+                            <% } %>
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <label>Nome</label>
+                                <input value="<%= contato.nome %>" type="text" name="nome">
+                                <label>Sobrenome</label>
+                                <input value="<%= contato.sobrenome %>" type="text" name="sobrenome">
+                                <label>E-mail</label>
+                                <input value="<%= contato.email %>" type="email" name="email">
+                                <label>Telefone</label>
+                                <input value="<%= contato.telefone%>" type="text" name="telefone">
+                                <% if(contato._id) { %>
+                                    <button>Salvar contato</button>
+                                    <%} else { %>
+                                        <button>Adicionar contato</button>
+                                        <%}%>
+                        </form>
+                        <p>Não deseja adicionar contato?<a href="/"> Voltar.</a></p>
+                        <%- include('includes/messages'); %>
+        </div>
+        <img src="/assets/img/Vetor.png">
+    </main>
+    <%- include('includes/footer'); %>

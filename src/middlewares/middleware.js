@@ -19,3 +19,16 @@ exports.csrfMiddleware = (req, res, next) => {
   res.locals.csrfToken = req.csrfToken();
   next();
 };
+
+
+
+// Middleware para obter o ID do usuário autenticado
+exports.userIdMiddleware = (req, res, next) => {
+  if (req.session.user && req.session.user._id) {
+    req.userID = req.session.user._id;
+  } else {
+    req.userID = null; // Ou lidar com a falta de autenticação de alguma outra forma
+  }
+  next();
+};
+

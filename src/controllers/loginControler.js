@@ -5,7 +5,7 @@ exports.index = (req, res) => {
         res.redirect('/main');
         return;
     }
-    res.render('index');
+    res.render('index', {title: "Login"});
 }
 
 exports.entrar = async function (req, res) {

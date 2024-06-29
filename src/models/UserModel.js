@@ -21,18 +21,18 @@ class User {
     this.valida();
     if (this.erros.length > 0) return;
 
-    this.user= await UserModel.findOne({ email: this.body.email });
+    this.user = await UserModel.findOne({ email: this.body.email });
 
-    if(! this.user){ 
-     this.erros.push("Email ou senha inválido");
-     return;
+    if (!this.user) {
+      this.erros.push("Email ou senha inválido");
+      return;
     }
 
-    if(! bcrypt.compareSync(this.body.password, this.user.password)){
+    if (!bcrypt.compareSync(this.body.password, this.user.password)) {
       this.erros.push("Senha incorreta.")
       this.user = null;
     }
-  } 
+  }
 
   async register() {
     this.valida();

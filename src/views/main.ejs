@@ -8,14 +8,47 @@
         <a class="btn-sair" href="/sair">Sair</a>
     </header>
 
-    <main>
+    <main class="conteinerMain">
         <div class="conteiner-bemVindo">
-            <img src="/assets/img/Vetor.png">
             <div>
-                <h1>Seja bem vindo <span> <%= user.nome %> </span>!</h1>
-                <p>Abaixo estão todos os seus contatos</p>
+                <img src="/assets/img/Vetor.png">
+                <h1>Seja bem vindo <span>
+                        <%= user.nome %>
+                    </span>!</h1>
             </div>
+            <p>Abaixo estão todos os seus contatos</p>
         </div>
+
+        <div class="divContatos">
+            <% contatos.forEach(contato=>{ %>
+                <div class="conteinterContatos">
+                    <div>
+                        <img src="/assets/img/notImage.png">
+                        <p>
+                            <%= contato.criadoEm %>
+                        </p>
+                    </div>
+                    <div class="infoContato">
+                        <p>
+                            <%= contato.nome %>
+                                <%= contato.sobrenome %>
+                        </p>
+                        
+                        <p>
+                            <%= contato.email %>
+                        </p>
+                        <p>
+                            <%= contato.telefone %>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="/cadastroContato/<%= contato._id %>">Editar</a>
+                        <a href="/cadastroContato/delete/<%= contato._id %>">Excluir</a>
+                    </div>
+                </div>
+                <% } )%>
+        </div>
+        <a class="btnAddContato" href="cadastroContato">Adicionar novo contato</a>
     </main>
 
     <%- include('includes/footer'); %>
