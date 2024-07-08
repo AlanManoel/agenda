@@ -212,3 +212,9 @@ p a {
   margin: 48px 100px;
   gap: 20px;
 }
+
+@media (max-width: 600px) {
+  .conteinerMain .btnAddContato {
+    width: 300px;
+  }
+}
